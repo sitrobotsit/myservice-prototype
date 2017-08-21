@@ -95,6 +95,9 @@ app.get('/forgot-password-step4', function(request, response) {
 app.get('/system-error', function(request, response) {
   response.render('unauth/system-error');
 });
+app.get('/timeout', function(request, response) {
+  response.render('unauth/timeout');
+});
 
 /**
   Authenticated space
@@ -158,9 +161,6 @@ app.get('/cover-step6-b', function(request, response) {
 });
 app.get('/cover-nlhc-step2', function(request, response) {
   response.render('auth/cover/pages/cover-nlhc-step2');
-});
-app.get('/cover-nlhc-submitted', function(request, response) {
-  response.render('auth/cover/pages/cover-nlhc-submitted');
 });
 app.get('/cover-nlhc-approved', function(request, response) {
   response.render('auth/cover/pages/cover-nlhc-approved');
