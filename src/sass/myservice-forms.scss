@@ -278,7 +278,8 @@ label {
 
 
 
-input[type='checkbox'] + span {
+input[type='checkbox'] + span,
+input[type='radio'] + span {
 	display:inline-block;
 	font-weight: normal !important;
 }
@@ -399,4 +400,16 @@ input[type=number] {
 }
 .ui-front {
     z-index: 100;
+}
+
+
+// A form call out reverses the colour contrast to ensure important functionality is highlighted
+
+.form-callout {
+  background-color: $blue-light;
+  padding: 0.5em 1em;
+  color: black;
+  button {
+    border: 1px solid white;
+  }
 }
