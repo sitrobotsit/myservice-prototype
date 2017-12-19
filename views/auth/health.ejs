@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>Health | MyService</title>
+  <link href="docs/css/main.css" rel="stylesheet">
+</head>
+<body class="uikit-body uikit-grid landing-page-authenticated uikit-refactor">
+  <noscript><p role="alert">This website needs JavaScript to work properly.</p></noscript>
+  <nav class="uikit-skip-link"><a class="uikit-skip-link__link" href="#main-content">Skip to main content</a></nav>
+  <% include ../global/partials/header-topbar.ejs %>
+  <% include ../global/partials/header-authenticated--health.ejs %>
+  <main>
+	<div class="container">
+		<h1>Health</h1>
+
+		<div class="row">
+    		<div class="col-sm-6">
+    		
+    			<h2>Your DVA Health card (White card)</h2>
+    			
+				<p>You can use your DVA Health card to access health services for the following accepted conditions:</p>
+				<ul>
+					<li>Lumbar spondylosis</li>
+					<li>Mental health treatment</li>
+					<li>Sprained ankle</li>
+				</ul>
+			</div>
+			<div class="col-sm-6" style="text-align:center;">
+				<img src="../../docs/images/healthcard-samplecard.png" width="350">
+			</div>
+		</div>
+		
+		
+		
+	</div>
+    <div style="background-color:#f4f4f4; padding:30px 0 60px 0; margin-top:30px;">
+    	<div class="container">
+    		<h2>How to use your Health card</h2>
+    		
+    		<div class="row">
+    			<div class="col-sm-4">
+    				<img src="../../docs/images/healthcard-step1.png" width="85%">
+    				<p>Confirm with your health care provider that they accept the DVA Health card when making your appointment for treatment. Prior approval from DVA is not generally required. Your provider will make arrangements if prior approval is necessary.</p></div>
+				<div class="col-sm-4">
+					<img src="../../docs/images/healthcard-step2.png" width="85%">
+					<p>Show your physical or digital DVA Health card to your health care provider when receiving treatment.</p>
+				</div>
+   				<div class="col-sm-4">
+   					<img src="../../docs/images/healthcard-step3.png" width="85%">
+   					<p>You don’t have to pay for treatment if it relates to any of your approved conditions or any mental health condition.</p>
+   					<div style="border:1px solid #666666; padding:1em;">
+						If you are billed by your health care provider, <b><u>DO NOT</u></b> pay the account and tell DVA immediately on 555-5555
+   					</div>
+   				</div>
+    		</div>
+    		
+    	</div>
+    </div>
+
+  </main>
+  <% include ../global/partials/footer.ejs %>
+
+</body>
+</html>

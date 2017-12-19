@@ -174,7 +174,9 @@ app.get('/profile-financial-other', function(request, response) {
 app.get('/profile-assets-added', function(request, response) {
   response.render('auth/profile-assets-added');
 });
-
+app.get('/health', function(request, response) {
+  response.render('auth/health');
+});
 
 /* Change email flow */
 app.get('/change-email-poi', function(request, response) {
