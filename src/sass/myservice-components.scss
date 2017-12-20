@@ -184,3 +184,14 @@
   clear: both;
 }
 /* close commented backslash hack */
+
+// Boxed list items
+
+.boxed-list-items {
+	list-style:none;
+    padding-left:0px!important;
+	li {
+		border:1px solid #cccccc;
+		padding:1em;
+	}
+}
