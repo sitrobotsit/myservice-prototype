@@ -1,3 +1,4 @@
+
 /**********************************
 	Headers
 
@@ -6,6 +7,13 @@
 
 // Default: Blue background for authenticated pages
 
+.navigation {
+	padding-left:0px;
+	.container {
+		padding-left:0px!important;
+		padding-right:0px!important;
+	}
+}
 header {
 	padding-left: 1em;
 	min-height: 3.5em;
@@ -58,6 +66,107 @@ header {
 } // end header
 
 
+/**********************************
+	PROFILE DROP-DOWN
+**********************************/
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    float:right;
+	position: relative;
+    display: inline-block;
+
+	
+	/* Dropdown Button */
+	
+	.dropbtn {
+		background-color: transparent;
+		color: white;
+		font-size:1em;
+		height:58px;
+		padding:1em 1em 1em 3em;
+		border: none;
+		cursor: pointer;
+		&.nav-profile {
+			background: transparent url(../images/ico-profile.svg) no-repeat 1em 1em;
+			background-size: 25px 25px;
+			span {
+				display:none;
+			}
+		}
+		i {
+    		border: solid white;
+    		border-width: 0 3px 3px 0;
+    		display: inline-block;
+    		padding: 4px;
+			margin:0 0 2px 0.2em;
+		}
+		.down {
+    		transform: rotate(45deg);
+    		-webkit-transform: rotate(45deg);
+		}
+	}
+
+	
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: white;
+		min-width: 220px;
+		left:auto;
+		right:0;
+		margin-right:2px;
+		padding-top:1.5em;
+		padding-bottom:1.5em;
+		z-index: 5;
+		font-size:0.9em;
+		border-left: 1px solid #cccccc;
+		border-right: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		-webkit-box-shadow: -1px 2px 7px 1px rgba(0,0,0,0.2);
+		box-shadow: -1px 2px 7px 1px rgba(0,0,0,0.2);
+
+		/* Links inside the dropdown */
+		a {
+			color: $blue;
+			padding: 0.4em 1.5em 0.4em 1.5em;
+			border:none;
+			text-decoration: none;
+			display: block;
+			/* Change color of dropdown links on hover */
+			&:hover {
+				background-color: #e4e4e4!important;
+				border-right:4px solid $blue;
+			}
+		}
+	}	
+
+	&:hover {
+		/* Show the dropdown menu on hover */
+		.dropdown-content {
+			display: block;
+		}
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropbtn {
+			background-color: white!important;
+			color: black;
+			&.nav-profile {
+				background: transparent url(../images/ico-profile-grey2.svg) no-repeat 1.2em 1em;
+				background-size: 25px 25px;
+			}
+			i {
+				border: solid #666666;
+				border-width: 0 3px 3px 0;
+				display: inline-block;
+				padding: 4px;
+				margin:0 0 2px 0.4em!important;
+			}
+		}
+	}
+}
+
 @media only screen and (min-width: $medium-handheld) {
 	header {
 		min-height: 5em;
@@ -81,15 +190,51 @@ header {
 				list-style-type: none;
 				padding: 0.75em 0 0 0;
 			}
-		}	
+		}
+		
+		.dropdown {
+			.dropbtn {
+				height:80px;
+				padding:1em 1em 1em 3em;
+				min-width: 220px;
+				&.nav-profile {
+					background: transparent url(../images/ico-profile.svg) no-repeat 1em 1.7em;
+					background-size: 25px 25px;
+					span {
+						display:inline;
+					}
+				}
+				i {
+					margin:0 0 2px 0.5em;
+				}
+			}
+			.dropdown-content {
+				padding-top:0;
+			}
+			&:hover {
+				/* Change the background color of the dropdown button when the dropdown content is shown */
+				.dropbtn {
+					background-color: white!important;
+					color: black;
+					&.nav-profile {
+					background: transparent url(../images/ico-profile-grey2.svg) no-repeat 1em 1.7em;
+					background-size: 25px 25px;
+					}
+					i {
+						border: solid #666666;
+						border-width: 0 3px 3px 0;
+						display: inline-block;
+						padding: 4px;
+						margin:0 0 2px 0.4em!important;
+					}
+				}
+			}
+		}
 	}
 }
 @media only screen and (min-width: $medium-tablet) {
 	header {
-		.logo-myservice {
-			max-width: 300px;
-			padding: 1.25em 0 0 0;
-		}
+
 		&.landing-page {
 			img {
 				max-width: 240px;
@@ -99,7 +244,7 @@ header {
 					max-width: 300px;
 				}
 			}
-      .header-login {
+			.header-login {
 				padding: 1.4em 0 0 0;
 			}
 		}	

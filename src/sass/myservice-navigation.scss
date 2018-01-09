@@ -63,20 +63,20 @@
 // Starting with mobile view - navigation hidden until triggered
 
 .toggle {
-  float: right;
-  padding: 0.7em 0.7em 0.7em 2.8em;
+  float: left;
+  padding: 1em 0.7em 1em 2.8em;
+	margin-right:1em;
   border: none;
-  margin-top: 0.4em;
-  border-radius: 3px;
+  height:60px;
   font-size: 1em;
   background: transparent;
   color: #fff;
   display: none;
-  background: transparent url(../images/ico-menu-open.svg) no-repeat 1em 0.7em;
-	background-size: 20px 20px;
+  background: #1E6CB0 url(../images/ico-menu-open.svg) no-repeat 1em 1.25em;
+  background-size: 20px 20px;
   &:focus,
   &:hover {
-  background: black url(../images/ico-menu-open.svg) no-repeat 1em 0.7em;
+  background: black url(../images/ico-menu-open.svg) no-repeat 1em 1.25em;
 		background-size: 20px 20px;
 		cursor: pointer;
   }
