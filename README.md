@@ -6,7 +6,3 @@ Install Gulp CLI npm install --global gulp-cli
 Run npm install
 
 Then run gulp serve
-
-TESTING CI
-
-TESTING CI x2
